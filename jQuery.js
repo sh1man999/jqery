@@ -137,23 +137,22 @@ $(window).resize(function(){ // при изминении окна браузе�
    console.log(window.innerHeight, window.innerWidth); // выводим в консовь высоту и ширину окна 
 });
 
+//AddEventListener при клике
 $('#nav').on("click", function () {
             $(this).css('color','red');
         });
 // изменит цвет элемента с id nav, при клике
 
+// изменит цвет span, который нвходится внутри элемента с id nav, при клике
 $('#nav').on("click", function () {
             $('span', this).css('color','red');
         });
-// изменит цвет span, который нвходится внутри элемента с id nav, при клике
+
   
 $('button').on("click", {user:"Test"} ,function (e) {
             $(this).css('color','red');
-            console.log(e.data.user)
         });
-// изменит цвет элемента с id nav, при клике, 
-// и при этом событии (е) вызовет console.log(e.data.user), 
-// user мы объявили в самой функции
+
 
 $('.someDiv').on("click", function (e) {
             $('#modal-div').css("background-color", $(e.target).css("background-color"));
