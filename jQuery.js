@@ -128,9 +128,10 @@ $('a[href*="r"]')           /* все ссылки которые содержа
 //                                     СОБЫТИЯ
 //---------------------------------------------------------------------------------
 
-$("#example_1").everyTime(1000, function(i) {
-$(this).text(i);
-});
+//Таймер
+setTimeout(function() {
+   ...
+  }, 1000);
 
 $(window).resize(function(){ // при изминении окна браузера
    console.log(window.innerHeight, window.innerWidth); // выводим в консовь высоту и ширину окна 
