@@ -248,7 +248,26 @@ $(this).animate({width:300},{duration: 1000, specialEasing:{width:'swing'}, comp
         return false; // для того что бы остановить выполнение
     });
 </script>
-
+   
+/*--------------------Прочее Ajax--------------------------------*/
+   <script>
+   $.ajax({
+			  type: 'GET', // GET или POST
+			  dataType: 'json',
+		     contentType: 'application/json; charset=utf-8',
+			  headers: {
+			  	'X-CSRFToken':document.querySelector('[name=csrfmiddlewaretoken]').value,
+			  },
+			  url: 'js/live_map',
+			  success: function (response) {
+			      console.log(response['data']);
+			  },
+			  error: function (response) {
+			       console.log(response);
+			  }
+		  });
+   </script>
+   
 /*--------------------Передаём данные с PHP в JS с помощью Ajax--------------------------------*/
 // cars.php
 <?php
